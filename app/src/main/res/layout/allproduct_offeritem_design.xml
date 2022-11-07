@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="165dp"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/details_Click"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ripaleffect"
+        android:backgroundTint="@color/white"
+        android:elevation="8dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/img_con">
+
+                <TextView
+                    android:id="@+id/product_name_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Product Name"
+                    android:maxLines="1"
+                    android:textColor="@color/rama"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:id="@+id/ruppesicon"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ruppee"
+                    android:tint="#0F814D" />
+
+                <TextView
+                    android:id="@+id/product_price_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toEndOf="@+id/ruppesicon"
+                    android:text="Product Price"
+                    android:textColor="#0F814D"
+                    android:textSize="14.8dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/product_catrgory_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_name_txt"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="2"
+                    android:text="Product Category"
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
+
+
+                <TextView
+                    android:id="@+id/product_description_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_catrgory_txt"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="2"
+                    android:text="Product Description"
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/img_con"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true">
+
+                    <RelativeLayout
+                        android:id="@+id/img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/i"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:backgroundTint="#F5F5F5"
+                                app:cardCornerRadius="10dp">
+
+                                <ImageView
+                                    android:id="@+id/product_image_R"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_launcher_foreground" />
+
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

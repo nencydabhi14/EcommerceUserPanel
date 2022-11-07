@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_200">#FFFFFF</color>
+    <color name="purple_500">#FFFFFF</color>
+    <color name="purple_700">#76FF03</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="offwhite">#F5F5F5</color>
+    <color name="rama">#184040</color>
+    <color name="whiteedit">#f6f8f8</color>
+    <color name="ofblue">#BA214948</color>
+    <color name="red">#DF1837</color>
+    <color name="orange">#FA6450</color>
+
+    <color name="greylight">#becbcb</color>
+    <color name="grey">#F0F0F0</color>
+    <color name="bblue">#E7FDFF</color>
+
+</resources>

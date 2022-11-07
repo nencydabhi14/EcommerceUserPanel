@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ecommerce UserPanel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="web_client_id">576944645822-ue9r38vpj8d7mv8sr6kkmt74g3jb5cd0.apps.googleusercontent.com</string>
+
+</resources>

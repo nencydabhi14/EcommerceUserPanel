@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".Fragments.CartFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/empty_cart_img"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_below="@id/actiom"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/emptycart"/>
+
+        <TextView
+            android:id="@+id/empty_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/empty_cart_img"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/rama"
+            android:fontFamily="@font/quicksandsemibold"
+            android:textSize="16dp"
+            android:text="You'r cart is empty"/>
+
+
+        <RelativeLayout
+            android:id="@+id/actiom"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/rama">
+
+            <ImageView
+                android:id="@+id/back_cart"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="9dp"
+                android:padding="7dp"
+                android:src="@drawable/cart"
+                android:tint="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:id="@+id/circle"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="3dp"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_baseline_circle_24"
+                    android:tint="@color/offwhite" />
+
+                <TextView
+                    android:id="@+id/total_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="3dp"
+                    android:padding="8dp"
+                    android:textColor="@color/rama"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/quicksandsemibold"
+                android:text="Cart"
+                android:textColor="@color/white"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actiom" >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/addtocart_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp" />
+
+                <LinearLayout
+                    android:id="@+id/adds_rectangle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addtocart_recyclerview"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:id="@+id/billing"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_below="@id/adds_rectangle"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/conyainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/price_d_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quicksandsemibold"
+                            android:text="Price Details ("
+                            android:textColor="@color/rama"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/total_items"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/price_d_txt"
+                            android:fontFamily="@font/quicksandsemibold"
+                            android:textColor="@color/rama"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_toEndOf="@+id/total_items"
+                            android:fontFamily="@font/quicksandsemibold"
+                            android:text="items)"
+                            android:textColor="@color/rama"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/total_price_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/price_d_txt"
+                            android:layout_marginTop="10dp"
+                            android:text="Total Product Price"
+                            android:textColor="#434343"
+                            android:textSize="12.5dp" />
+
+                        <ImageView
+                            android:id="@+id/rupeeam"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_below="@+id/price_d_txt"
+                            android:layout_marginTop="13dp"
+                            android:layout_toStartOf="@+id/total_amount_txt"
+                            android:src="@drawable/ruppee"
+                            android:tint="@color/rama" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_below="@+id/price_d_txt"
+                            android:layout_toStartOf="@+id/rupeeam"
+                            android:text="+"
+                            android:textColor="#1C1C1C"
+                            android:textSize="12.5dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_amount_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/price_d_txt"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/rama"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/total_price_txt"
+                            android:layout_marginTop="10dp"
+                            android:text="Total Discount"
+                            android:textColor="#1C1C1C"
+                            android:textSize="12.5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/total_price_txt"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_toStartOf="@+id/rupee"
+                            android:text="-"
+                            android:textColor="#1C1C1C"
+                            android:textSize="12.5dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/rupee"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_below="@+id/total_price_txt"
+                            android:layout_marginTop="13dp"
+                            android:layout_toStartOf="@+id/total_discount"
+                            android:src="@drawable/ruppee"
+                            android:tint="#0F814D" />
+
+                        <TextView
+                            android:id="@+id/total_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/total_price_txt"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#0F814D"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/conyainer"
+                        android:background="#E3E3E3" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quicksandsemibold"
+                            android:text="Total Order"
+                            android:textColor="@color/rama"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toStartOf="@+id/total_price"
+                            android:src="@drawable/ruppee" />
+
+                        <TextView
+                            android:id="@+id/total_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/quicksandsemibold"
+                            android:textColor="@color/rama"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/view_product"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/empty_txt"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/stoke_shape_imageup">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ripaleffect">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Product"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/rama"
+                    android:textSize="15dp"
+                    android:fontFamily="sans-serif-medium"/>
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

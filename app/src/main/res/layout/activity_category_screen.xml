@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.Category_Screen">
+
+    <RelativeLayout
+        android:id="@+id/category_Action_conatiner"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/rama">
+
+        <ImageView
+            android:id="@+id/back_category"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ripaleffect"
+            android:padding="3dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+            android:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/back_category"
+            android:fontFamily="@font/quicksandsemibold"
+            android:text="All Product Category"
+            android:textColor="@color/white"
+            android:textSize="19dp" />
+
+
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_recycler_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category_Action_conatiner" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_category_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category_Action_conatiner"
+        android:layout_toEndOf="@+id/category_recycler_View" />
+
+    <ProgressBar
+        android:id="@+id/progress_Bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

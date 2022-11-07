@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:background="#F5F5F5"
+    android:padding="3.5dp">
+
+    <RelativeLayout
+        android:id="@+id/details_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="280dp">
+
+        <RelativeLayout
+            android:id="@+id/img_relative"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/img_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_launcher" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/img_relative"
+            android:background="@color/white"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/product_name_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textColor="@color/rama"
+                android:textSize="15dp" />
+
+            <RelativeLayout
+                android:id="@+id/price_continer"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_below="@+id/product_name_all"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/ruppee_img_D"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ruppee"
+                    android:tint="#0F814D" />
+
+                <TextView
+                    android:id="@+id/product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/ruppee_img_D"
+                    android:fontFamily="sans-serif-black"
+                    android:text="1200"
+                    android:textColor="#0F814D"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/product_category_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/price_continer"
+                android:text="Product Category"
+                android:textColor="@color/rama"
+                android:textSize="14dp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
